@@ -1,9 +1,8 @@
 const colors = {
-  dark: '#2f3640',
-  lighterDark: '#353b48',
-  white: '#f5f6fa',
-  darkerWhite: '#dcdde1',
-  grey: '#718093',
+  bgColor: '#181617',
+  fontColor: '#ffffff',
+  primary: '#e7e7e7',
+  secondary: '#fefefe',
 };
 
 export default colors;
