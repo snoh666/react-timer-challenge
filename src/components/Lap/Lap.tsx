@@ -1,13 +1,24 @@
 import React from 'react';
-import TimeDisplay from '@components/TimeDisplay';
+import { useDispatch } from 'react-redux';
 
-import { Wrapper, Title } from '@components/Lap/Lap.styled';
+import { ReactComponent as DeleteIcon } from '@assets/delete.svg';
+import TimeDisplay from '@components/TimeDisplay';
+import { DeleteLap } from '@redux/laps/actions';
+import Button from '@components/Button';
+
+import { Wrapper, Title } from './Lap.styled';
 
 interface Props {
   lap: Lap;
 }
 
 const Lap: React.FC<Props> = ({ lap }) => {
+  const dispatch = useDispatch();
+
+  const deleteLap = () => {
+    dispatch(DeleteLap(lap.id));
+  };
+
   return (
     <Wrapper>
       <Title>
@@ -16,6 +27,11 @@ const Lap: React.FC<Props> = ({ lap }) => {
         <span>:</span>
       </Title>
       <TimeDisplay time={lap.timestamp} />
+      <Button type='button' onClick={deleteLap}>
+        <span>
+          <DeleteIcon />
+        </span>
+      </Button>
     </Wrapper>
   );
 };
