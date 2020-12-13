@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { ReactComponent as TimerIcon } from '@assets/timer.svg';
 import { ReactComponent as PlayIcon } from '@assets/play_arrow.svg';
 import { ReactComponent as PauseIcon } from '@assets/pause.svg';
-import { ReactComponent as ResetIcon } from '@assets/loop.svg';
+import { ReactComponent as StopIcon } from '@assets/stop.svg';
 import { AddLap } from '@redux/laps/actions';
 import TimeDisplay from '@components/TimeDisplay';
 import Button from '@components/Button';
@@ -35,7 +35,7 @@ const Stopwatch: React.FC = () => {
     dispatch(AddLap(currentTime));
   };
 
-  const resetTimer = () => {
+  const stopTimer = () => {
     setIsRunning(false);
     setCurrentTime(0);
   };
@@ -52,8 +52,8 @@ const Stopwatch: React.FC = () => {
         <Button type='button' onClick={() => addTimestamp()}>
           <TimerIcon />
         </Button>
-        <Button type='button' onClick={() => resetTimer()}>
-          <ResetIcon />
+        <Button type='button' onClick={() => stopTimer()}>
+          <StopIcon />
         </Button>
       </Row>
     </Wrapper>
