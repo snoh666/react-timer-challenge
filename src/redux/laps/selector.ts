@@ -1,6 +1,6 @@
 import { RootState } from '@redux/reducers/root';
-import { AuthState } from '@redux/laps/types';
+import { LapsState } from '@redux/laps/types';
 
-const getAuthState = (state: RootState): AuthState => state.auth;
+const getLapsState = (state: RootState): LapsState => state.laps;
 
-export default getAuthState;
+export default getLapsState;
