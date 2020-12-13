@@ -5,14 +5,16 @@ import { ReactComponent as DeleteIcon } from '@assets/delete.svg';
 import TimeDisplay from '@components/TimeDisplay';
 import { DeleteLap } from '@redux/laps/actions';
 import Button from '@components/Button';
+import TwoDigitNumber from '@components/TwoDigitNumber';
 
 import { Wrapper, Title } from './Lap.styled';
 
 interface Props {
   lap: Lap;
+  index: number;
 }
 
-const Lap: React.FC<Props> = ({ lap }) => {
+const Lap: React.FC<Props> = ({ lap, index }) => {
   const dispatch = useDispatch();
 
   const deleteLap = () => {
@@ -21,12 +23,14 @@ const Lap: React.FC<Props> = ({ lap }) => {
 
   return (
     <Wrapper>
-      <Title>
-        Lap&nbsp;
-        <span>{lap.id + 1}</span>
-        <span>:</span>
-      </Title>
-      <TimeDisplay time={lap.timestamp} />
+      <Wrapper>
+        <Title>
+          Lap&nbsp;
+          <TwoDigitNumber value={index + 1} />
+          <span>:</span>
+        </Title>
+        <TimeDisplay time={lap.timestamp} />
+      </Wrapper>
       <Button type='button' onClick={deleteLap}>
         <span>
           <DeleteIcon />
