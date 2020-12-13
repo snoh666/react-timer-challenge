@@ -1,6 +1,7 @@
 import {
   ADD_LAP,
   DELETE_LAP,
+  RESET_LAPS,
   LapsActionTypes,
   LapsState,
 } from '@redux/laps/types';
@@ -29,6 +30,10 @@ const lapsReducer = (
     case DELETE_LAP:
       return {
         laps: [...state.laps.filter(({ id }) => id !== action.lapId)],
+      };
+    case RESET_LAPS:
+      return {
+        laps: [],
       };
     default:
       return state;
