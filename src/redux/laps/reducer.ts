@@ -20,7 +20,9 @@ const lapsReducer = (
           ...state.laps,
           {
             timestamp: action.timestamp,
-            id: state.laps[state.laps.length - 1].id + 1,
+            id: state.laps?.length
+              ? state.laps[state.laps.length - 1].id + 1
+              : 0,
           },
         ],
       };
