@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/react-timer-challenge/static/js/main.8565e23e.chunk.js",
+    "main.js.map": "/react-timer-challenge/static/js/main.8565e23e.chunk.js.map",
+    "runtime-main.js": "/react-timer-challenge/static/js/runtime-main.447b3061.js",
+    "runtime-main.js.map": "/react-timer-challenge/static/js/runtime-main.447b3061.js.map",
+    "static/js/2.bad99c21.chunk.js": "/react-timer-challenge/static/js/2.bad99c21.chunk.js",
+    "static/js/2.bad99c21.chunk.js.map": "/react-timer-challenge/static/js/2.bad99c21.chunk.js.map",
+    "static/js/3.fa4e5b8a.chunk.js": "/react-timer-challenge/static/js/3.fa4e5b8a.chunk.js",
+    "static/js/3.fa4e5b8a.chunk.js.map": "/react-timer-challenge/static/js/3.fa4e5b8a.chunk.js.map",
+    "index.html": "/react-timer-challenge/index.html",
+    "static/js/2.bad99c21.chunk.js.LICENSE.txt": "/react-timer-challenge/static/js/2.bad99c21.chunk.js.LICENSE.txt",
+    "static/media/delete.3172ee59.svg": "/react-timer-challenge/static/media/delete.3172ee59.svg",
+    "static/media/loop.15f6b135.svg": "/react-timer-challenge/static/media/loop.15f6b135.svg",
+    "static/media/pause.9f7d9f6d.svg": "/react-timer-challenge/static/media/pause.9f7d9f6d.svg",
+    "static/media/play_arrow.b2f4ba6a.svg": "/react-timer-challenge/static/media/play_arrow.b2f4ba6a.svg",
+    "static/media/stop.f54b2660.svg": "/react-timer-challenge/static/media/stop.f54b2660.svg",
+    "static/media/timer.e6dc851a.svg": "/react-timer-challenge/static/media/timer.e6dc851a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.447b3061.js",
+    "static/js/2.bad99c21.chunk.js",
+    "static/js/main.8565e23e.chunk.js"
+  ]
+}
