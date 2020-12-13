@@ -36,6 +36,7 @@ const Stopwatch: React.FC = () => {
   };
 
   const resetTimer = () => {
+    setIsRunning(false);
     setCurrentTime(0);
   };
 
