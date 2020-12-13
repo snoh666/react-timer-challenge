@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import authReducer from '@redux/auth/reducer';
+import lapsReducer from '@redux/laps/reducer';
 
 const rootReducer = combineReducers({
-  auth: authReducer,
+  laps: lapsReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

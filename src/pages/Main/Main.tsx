@@ -5,7 +5,7 @@ import Basic from '@layouts/Basic';
 const Main: React.FC = () => {
   return (
     <Basic>
-      <p>Main route page</p>
+      <p>Main stopwatch page</p>
     </Basic>
   );
 };
