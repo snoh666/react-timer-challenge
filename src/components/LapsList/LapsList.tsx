@@ -4,23 +4,25 @@ import { useSelector } from 'react-redux';
 import getLapsState from '@redux/laps/selector';
 import Lap from '@components/Lap/Lap';
 
+import { Wrapper, List, ListItem } from '@components/LapsList/LapsList.styled';
+
 const LapsList: React.FC = () => {
   const { laps } = useSelector(getLapsState);
   return (
-    <div>
-      <p>Laps list</p>
-      {laps ? (
-        <ul>
-          {laps.map((item: Lap) => (
-            <li>
-              <Lap lap={item} />
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No laps available</p>
-      )}
-    </div>
+    <Wrapper>
+      {laps?.length > 0 ? (
+        <>
+          <p>Laps: </p>
+          <List>
+            {laps.map((item: Lap, index) => (
+              <ListItem key={item.id}>
+                <Lap lap={item} index={index} />
+              </ListItem>
+            ))}
+          </List>
+        </>
+      ) : null}
+    </Wrapper>
   );
 };
 
