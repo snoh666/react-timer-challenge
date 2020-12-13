@@ -13,8 +13,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors.dark};
-    color: ${({ theme }) => theme.colors.darkerWhite};
+    background: ${({ theme }) => theme.colors.bgColor};
+    color: ${({ theme }) => theme.colors.fontColor};
   }
 `;
 
