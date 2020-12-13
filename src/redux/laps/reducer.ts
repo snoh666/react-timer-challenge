@@ -18,7 +18,10 @@ const lapsReducer = (
       return {
         laps: [
           ...state.laps,
-          { timestamp: action.timestamp, id: state.laps.length },
+          {
+            timestamp: action.timestamp,
+            id: state.laps[state.laps.length - 1].id + 1,
+          },
         ],
       };
     case DELETE_LAP:
