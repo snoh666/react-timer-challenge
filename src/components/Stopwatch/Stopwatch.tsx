@@ -5,7 +5,8 @@ import { ReactComponent as TimerIcon } from '@assets/timer.svg';
 import { ReactComponent as PlayIcon } from '@assets/play_arrow.svg';
 import { ReactComponent as PauseIcon } from '@assets/pause.svg';
 import { ReactComponent as StopIcon } from '@assets/stop.svg';
-import { AddLap } from '@redux/laps/actions';
+import { ReactComponent as ResetIcon } from '@assets/loop.svg';
+import { AddLap, ResetLaps } from '@redux/laps/actions';
 import TimeDisplay from '@components/TimeDisplay';
 import Button from '@components/Button';
 
@@ -40,6 +41,11 @@ const Stopwatch: React.FC = () => {
     setCurrentTime(0);
   };
 
+  const resetTimer = () => {
+    stopTimer();
+    dispatch(ResetLaps());
+  };
+
   return (
     <Wrapper>
       <div>
@@ -54,6 +60,9 @@ const Stopwatch: React.FC = () => {
         </Button>
         <Button type='button' onClick={() => stopTimer()}>
           <StopIcon />
+        </Button>
+        <Button type='button' onClick={() => resetTimer()}>
+          <ResetIcon />
         </Button>
       </Row>
     </Wrapper>
